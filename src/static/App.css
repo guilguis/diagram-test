@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: Roboto, Lato, Helvetica, Arial, sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--bg-color);
+}
+
+.App .content-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - var(--medium));
+}
+
+/* General Color Classes */
+.primary-color {
+  color: var(--primary-color);
+}
+.secondary-color {
+  color: var(--secondary-color)
+}
+.primary-text-color {
+  color: var(--primary-text-color)
+}
+.secondary-text-color {
+  color: var(--secondary-text-color)
+}
+.basic-color {
+  color: var(--basic)
+}
+.info-color {
+  color: var(--info)
+}
+.success-color {
+  color: var(--success)
+}
+.warning-color {
+  color: var(--warning)
+}
+.danger-color {
+  color: var(--danger)
+}
+
+/* Custom Element Style */
+
+.primary-btn {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  text-align: center;
+  align-self: center;
+  padding: 1em;
+  border-radius: 5px;
+}
+.secondary-btn {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: var(--primary-text-color);
+  text-align: center;
+  align-self: center;
+  padding: 1em;
+  border-radius: 5px;
+}
+.info-btn {
+  cursor: pointer;
+  background-color: var(--info);
+  color: var(--primary-text-color);
+  text-align: center;
+  align-self: center;
+  padding: 1em;
+  border-radius: 5px;
+}
+.success-btn {
+  cursor: pointer;
+  background-color: var(--success);
+  color: var(--primary-text-color);
+  text-align: center;
+  align-self: center;
+  padding: 1em;
+  border-radius: 5px;
+}
+.warning-btn {
+  cursor: pointer;
+  background-color: var(--warning);
+  color: var(--primary-text-color);
+  text-align: center;
+  align-self: center;
+  padding: 1em;
+  border-radius: 5px;
+}
+.danger-btn {
+  cursor: pointer;
+  background-color: var(--danger);
+  color: var(--primary-text-color);
+  text-align: center;
+  align-self: center;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.rounded {
+  border-radius: 25px;
+}
+
+.circular {
+  border-radius: 50%;
+}

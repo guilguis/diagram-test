@@ -1,0 +1,60 @@
+.properties-bar {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+.properties-bar .property{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.properties-bar .property .input-wrapper{
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+    justify-content: space-around;
+}
+.properties-bar .property input{
+    min-height: 2em;
+    border-radius: 3px;
+    background-color: transparent;
+    color: var(--primary-text-color);
+    border: 1px solid var(--secondary-color);
+}
+.properties-bar .property .input-wrapper.inline{
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+    justify-content: start;
+}
+
+.properties-bar .property.multi-input .input-wrapper{
+    justify-content: space-between;
+}
+
+.properties-bar .property .input-wrapper.multi-input input[type=number]{
+    min-height: 2em;
+    max-width: 20%;
+
+}
+.properties-bar .property .input-wrapper.multi-input input[type=range]{
+    min-height: 2em;
+    width: 60%;
+}
+.properties-bar .property .input-wrapper.multi-input label{
+    min-height: 2em;
+    max-width: 20%;
+}

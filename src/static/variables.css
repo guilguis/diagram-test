@@ -1,0 +1,22 @@
+:root{
+    /* Colors */
+    --bg-color: #121020;
+    --primary-color: #435585;
+    --secondary-color: #818FB4;
+    --highlight-color: #F5E8C7;
+    --primary-text-color: #f7f7f7;
+    --secondary-text-color: #535b70;
+    --basic: #b9b9b9;
+    --info: #4c8cb6;
+    --success: #4fb97b;
+    --warning: #b39453;
+    --danger: #b35353;
+
+    
+    /* Sizes */
+    --tiny: .5em;
+    --small: 1em;
+    --medium: 3em;
+    --large: 5em;
+    --huge: 10em;
+}

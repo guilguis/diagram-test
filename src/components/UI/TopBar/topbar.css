@@ -1,0 +1,19 @@
+.topbar {
+    height: var(--medium);
+    padding: var(--tiny);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.topbar .title {
+    align-self: center;
+}
+
+
+.topbar .actions {
+    display: flex;
+    justify-items: center;
+    flex-direction: row;
+    gap: 15px;
+}
