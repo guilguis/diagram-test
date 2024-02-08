@@ -1,41 +1,54 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './properties.css'
+import { defaultConfigs } from './constants'
+import { IConfigState } from './types'
 
 interface Props {
-    
+  handleChangeConfigs: Function
+  configs: IConfigState
 }
 
 const Properties = (props: Props) => {
+  const [configs, setConfigs] = useState<IConfigState>(defaultConfigs)
+  
   return (
     <div className='properties-bar'>
       <div className='property'>
         <label className='primary-text-color label'> Diagram Name: </label>
-        <input type='text' placeholder='Insert a name' />
+        <input name='canvasName' value={props.configs.canvasName} type='text' onChange={({target}) => props.handleChangeConfigs(target.name, target.value)} placeholder='Insert a name' />
       </div>
       <div className='property'>
         <label className='primary-text-color label'> Diagram Size: </label>
         <div className='input-wrapper multi-input'>
           <span className='basic-color'> Width: </span>
-          <input type='range'/>
-          <input type='number' />
+          <input name='canvasWidth' value={props.configs.canvasWidth} onChange={({target}) => props.handleChangeConfigs(target.name, parseInt(target.value))} type='number' />
         </div>
         <div className='input-wrapper multi-input'>
           <span className='basic-color'> Height: </span>
-          <input type='range'/>
-          <input type='number' />
+          <input name='canvasHeight' value={props.configs.canvasHeight} onChange={({target}) => props.handleChangeConfigs(target.name, parseInt(target.value))} type='number' />
         </div>
       </div>
       <div className='property'>
-        <div className='input-wrapper inline'>
-          <input type='checkbox' placeholder='Insert a name' />
-          <label className='primary-text-color label'> Toggle Grid </label>
+        <div className='input-wrapper '>
+          <label className='primary-text-color inline'>
+            <input name='gridActive' checked={props.configs.gridActive} onChange={({target}) => props.handleChangeConfigs(target.name, target.checked)} type='checkbox' placeholder='Insert a name' />
+            Toggle Grid 
+          </label>
+        </div>
+      </div>
+      <div className='property'>
+        <div className='input-wrapper '>
+          <label className='primary-text-color inline'>
+            <input name='gridSnap' checked={props.configs.gridSnap} onChange={({target}) => props.handleChangeConfigs(target.name, target.checked)} type='checkbox' placeholder='Insert a name' />
+            Snap to grid
+          </label>
         </div>
       </div>
       <div className='property'>
         <span className='primary-text-color label'> Grid Size: </span>
         <div className='input-wrapper multi-input'>
-          <input type='range'/>
-          <input type='number' />
+          <input name='gridSize' value={props.configs.gridSize} min={15} max={50} step={5} onChange={({target}) => props.handleChangeConfigs(target.name, parseInt(target.value))} type='range'/>
+          <input name='gridSize' value={props.configs.gridSize} min={15} max={50} step={5} onChange={({target}) => props.handleChangeConfigs(target.name, parseInt(target.value))} type='number' />
         </div>
       </div>
     </div>

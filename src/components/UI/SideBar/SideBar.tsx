@@ -5,9 +5,11 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Properties from '../Properties/Properties'
 import Palette from '../Palette/Palette'
 import { CANVAS_INDEX, PALETTE_INDEX } from './constants'
+import { IConfigState } from '../Properties/types'
 
 interface Props {
-
+  handleChangeConfigs: Function
+  configs: IConfigState
 }
 
 const SideBar = (props: Props) => {
@@ -19,7 +21,7 @@ const SideBar = (props: Props) => {
   }
 
   return (
-    <aside className={`sidebar ${hidden ? 'hidden' : ''}`}>
+    <div className={`sidebar ${hidden ? 'hidden' : ''}`}>
         <button className='toggle-btn secondary-btn' onClick={() => toggleVisible()}> <FontAwesomeIcon className='primary-text-color' icon={faBars}/> </button>
         <div className='tab-menu'>
             <button className='tab-btn primary-btn' onClick={() => setActiveTab(CANVAS_INDEX)}> Properties </button>
@@ -28,14 +30,14 @@ const SideBar = (props: Props) => {
         <div className='panel'>
             {
                 activeTab === CANVAS_INDEX &&
-                <Properties />
+                <Properties configs={props.configs} handleChangeConfigs={props.handleChangeConfigs} />
             }
             {
                 activeTab === PALETTE_INDEX &&
                 <Palette />
             }
         </div>
-    </aside>
+    </div>
   )
 }
 

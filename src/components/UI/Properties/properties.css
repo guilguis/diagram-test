@@ -29,7 +29,7 @@
     color: var(--primary-text-color);
     border: 1px solid var(--secondary-color);
 }
-.properties-bar .property .input-wrapper.inline{
+.properties-bar .property .input-wrapper .inline{
     display: flex;
     flex-grow: 0;
     flex-shrink: 0;
@@ -41,20 +41,25 @@
     justify-content: start;
 }
 
-.properties-bar .property.multi-input .input-wrapper{
-    justify-content: space-between;
+.properties-bar .property .input-wrapper.multi-input{
+    justify-content: flex-start;
+    gap: 1em;
 }
 
 .properties-bar .property .input-wrapper.multi-input input[type=number]{
     min-height: 2em;
-    max-width: 20%;
+    max-width: 4em;
 
 }
 .properties-bar .property .input-wrapper.multi-input input[type=range]{
     min-height: 2em;
-    width: 60%;
+    width: 80%;
+}
+.properties-bar .property .input-wrapper input[type=text]{
+    min-height: 2em;
+    width: 100%;
 }
 .properties-bar .property .input-wrapper.multi-input label{
     min-height: 2em;
-    max-width: 20%;
+    max-width: 4em;
 }
