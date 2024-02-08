@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './properties.css'
-import { defaultConfigs } from './constants'
 import { IConfigState } from './types'
 
 interface Props {
@@ -9,7 +8,6 @@ interface Props {
 }
 
 const Properties = (props: Props) => {
-  const [configs, setConfigs] = useState<IConfigState>(defaultConfigs)
   
   return (
     <div className='properties-bar'>
